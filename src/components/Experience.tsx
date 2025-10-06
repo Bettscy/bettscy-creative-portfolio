@@ -84,7 +84,7 @@ const Experience = () => {
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                          <span className="text-primary mt-1.5">•</span>
+                          <span className="text-primary mt-0.5">•</span>
                           <span>{achievement}</span>
                         </li>
                       ))}

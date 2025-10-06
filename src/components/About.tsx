@@ -44,12 +44,16 @@ const About = () => {
                   <Briefcase size={40} />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Experience</h3>
-                <p className="text-muted-foreground">
-                  AI Intern at Galvanize Global Education
-                </p>
-                <p className="text-sm text-muted-foreground mt-1">
-                  Web Developer Intern at Hitachi
-                </p>
+                <ul className="space-y-1">
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="text-primary mt-0.5">•</span>
+                    <span>AI Intern at Galvanize Global Education</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="text-primary mt-0.5">•</span>
+                    <span>Web Developer Intern at Hitachi</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
 

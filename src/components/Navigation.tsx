@@ -54,7 +54,11 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+                className={`transition-colors font-medium ${
+                  isScrolled
+                    ? "text-foreground/80 hover:text-primary"
+                    : "text-white hover:text-primary-glow"
+                }`}
               >
                 {item.label}
               </button>
