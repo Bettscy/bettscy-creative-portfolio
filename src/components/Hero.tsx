@@ -42,10 +42,19 @@ const Hero = () => {
             <Button
               onClick={() => scrollToSection("contact")}
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 backdrop-blur-sm"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all"
             >
               Let's Connect
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="shadow-lg hover:shadow-xl transition-all"
+            >
+              <a href="/Bettscy_Doyal_Resume.pdf" download="Bettscy_Doyal_Resume.pdf">
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>

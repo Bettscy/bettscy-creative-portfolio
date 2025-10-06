@@ -56,22 +56,21 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 animate-fade-in border-border bg-card"
+              className="group hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in border-primary/20 bg-card shadow-md"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader>
                 <div className={`${category.color} mb-2 group-hover:scale-110 transition-transform`}>
                   <category.icon size={32} />
                 </div>
-                <CardTitle className="text-lg">{category.title}</CardTitle>
+                <CardTitle className="text-lg text-card-foreground">{category.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, idx) => (
                     <Badge
                       key={idx}
-                      variant="secondary"
-                      className="text-xs bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                      className="text-xs bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-colors"
                     >
                       {skill}
                     </Badge>

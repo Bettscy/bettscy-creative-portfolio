@@ -16,11 +16,17 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:bettscydoyal@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+    
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
+      title: "Opening Email Client",
+      description: "Your default email application will open with the message ready to send.",
     });
+    
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -43,22 +49,22 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      link: "#",
+      link: "https://github.com/Bettscy",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "#",
+      link: "https://www.linkedin.com/in/bettscy-doyal-258786277/",
     },
     {
       icon: Code2,
       label: "LeetCode",
-      link: "#",
+      link: "https://leetcode.com/u/BettscyDoyalM/",
     },
     {
       icon: Trophy,
       label: "HackerRank",
-      link: "#",
+      link: "https://www.hackerrank.com/profile/bm8968",
     },
   ];
 
@@ -105,10 +111,16 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.link}
-                    className="p-3 rounded-lg bg-card border border-border hover:border-primary hover:shadow-lg transition-all hover:scale-110"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-lg bg-card border border-border hover:border-primary hover:shadow-lg transition-all hover:scale-110 group relative"
                     aria-label={social.label}
+                    title={social.label}
                   >
                     <social.icon size={24} className="text-primary" />
+                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                      {social.label}
+                    </span>
                   </a>
                 ))}
               </div>
