@@ -59,13 +59,6 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <Button
-              onClick={() => window.open("/Bettscy_Doyal_Resume.pdf", "_blank")}
-              variant="default"
-              className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90"
-            >
-              Download Resume
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,13 +82,6 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <Button
-              onClick={() => window.open("/Bettscy_Doyal_Resume.pdf", "_blank")}
-              variant="default"
-              className="bg-gradient-to-r from-primary to-primary-glow w-full"
-            >
-              Download Resume
-            </Button>
           </div>
         )}
       </div>
